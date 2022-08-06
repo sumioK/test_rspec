@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
       last_name: "侍",
       first_name: "太郎"
     )
-    expect(user.full_name).to eq "侍　太郎"
+    expect(user.full_name).to eq "侍 太郎"
   end
 
 end
