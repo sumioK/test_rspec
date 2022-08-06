@@ -1,5 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+  it "性、名を登録すると、姓名が取得できること" do
+    user = User.new(
+      last_name: "侍",
+      first_name: "太郎"
+    )
+    expect(user.full_name).to eq "侍　太郎"
+  end
